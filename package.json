@@ -1,0 +1,24 @@
+{
+  "name": "apis-and-microservices-projects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattGYoung99/apis-and-microservices-projects.git"
+  },
+  "author": "Matthew G Young",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattGYoung99/apis-and-microservices-projects/issues"
+  },
+  "homepage": "https://github.com/MattGYoung99/apis-and-microservices-projects#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
+}
