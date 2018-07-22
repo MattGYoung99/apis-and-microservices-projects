@@ -1,20 +1,23 @@
 //Basic imports for nodeJS environments
 const express = require('express');
-const cors = require('cors');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 //Create an instance of express for our app and instantiate bodyParser and cors
-const app = module.exports = express();
+var app = module.exports = express();
 app.use(bodyParser.json());
-app.use(cors);
+app.use(cors());
 
 //Api url
-const api = '/api/whoami';
+const api = `/api/whoami`;
 app.get(api, (req, res, next) => {
-    console.log('Just to make sure');
+    const ipaddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const software = req.headers['user-agent'];
+    const language = req.headers['accept-language'].split(',')[0];
+    res.json({'ipaddress':ipaddress,'Supported Language':language,'System Specifications':software});
 })
 
 //Server setup
-app.listen(3000, () => {
+app.listen(8080, () => {
     console.log('Working');
 })
