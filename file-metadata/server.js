@@ -11,6 +11,6 @@ app.use(bodyParser.urlencoded({
 }))
 
 app.post('/uploadFile', (req, res) => {
-    res.json({file: req.body.upfile})
+    res.json({file: req.headers['content-length'] + ' bytes'})
 })
 app.listen(4000)
