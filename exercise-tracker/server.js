@@ -20,15 +20,31 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-app.post('/app/exercise/add', (req, res)=> {
-
-})
-
 app.post('/api/exercise/new-user', (req, res) => {
     new User({
-        _id: req.params.username
+        _id: req.body.username
+    }).save((err, doc) => {
+        if(err) res.json({error: err})
+        else {
+            res.json({data: doc})
+            console.log(doc)
+        }
     })
-    console.log(User)
+})
+
+app.post('/app/exercise/add', (req, res)=> {
+    User.findById({_id: req.body.userid}, (err, data) => {
+        if(err) {
+            res.json({error: err})
+        }
+        data.desc.push(req.body.description)
+        data.duration.push(req.body.duration)
+        data.date.push(req.body.dateOfExercise)
+        data.save((err, data) => {
+            if(err) res.json({error: err})
+            else res.json({data: data})
+        })
+    }) 
 })
 
 
