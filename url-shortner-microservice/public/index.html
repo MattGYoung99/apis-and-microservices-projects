@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
-<body>
-    <h1>URL Shortener Microservice</h1>
-    <section>
-        <input placeholder="enter URL to be shortened">
-        <button>Get ShortURL</button>
-    </section>
-</body>
+    <body>
+        <h1>TEST POST FORM</h1>
+        <form action="/api/shorturl/new" method="POST">
+            <p>URL:</p>
+             <input type="text" name='url[origin]'>
+             <p>Submit</p>
+             <input type="submit" value="POST URL">
+        </form>
+    </body>
 </html>
