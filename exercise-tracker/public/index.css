@@ -1,0 +1,13 @@
+body {
+    background-color: #eee;
+}
+
+#formCreateUser {
+    border: 1px solid #000;
+    background-color: lightblue;
+}
+
+#formAdd {
+    border: 1px solid #000;
+    background-color: grey
+}

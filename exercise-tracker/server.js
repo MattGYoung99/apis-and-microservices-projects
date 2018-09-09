@@ -20,6 +20,17 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
+app.post('/app/exercise/add', (req, res)=> {
+
+})
+
+app.post('/api/exercise/new-user', (req, res) => {
+    new User({
+        _id: req.params.username
+    })
+    console.log(User)
+})
+
 
 app.get('/test', (req, res) => {
     res.send('Hello World')

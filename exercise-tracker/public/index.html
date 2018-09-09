@@ -4,9 +4,28 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        
+    <div>
+        <form id='formCreateUser' action='/api/exercise/new-user'>
+            <p>Enter Username:</p>
+            <input type='text' placeholder="username" name='username'>
+            <p>Submit:</p>
+            <input type='submit'>
+        </form>
+    </div>
+    <div>
+        <form id='formAdd' action='/api/exercise/add'>
+            <p>Description:</p>
+            <input type='text' placeholder='description' name='description'>
+            <p>Duration of exercise:</p>
+            <input type='text' placeholder="duration" name='duration'>
+            <p>Date of Exercise:</p>
+            <input type='text' placeholder='date' name='dateOfExercise'>
+            <p>Submit</p>
+            <input type='submit'>
+        </form>
+    </div>
     </body>
 </html>
