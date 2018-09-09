@@ -32,7 +32,7 @@ app.post('/api/exercise/new-user', (req, res) => {
     })
 })
 
-app.post('/app/exercise/add', (req, res)=> {
+app.post('/api/exercise/add', (req, res)=> {
     User.findById({_id: req.body.userid}, (err, data) => {
         if(err) {
             res.json({error: err})
